@@ -3,7 +3,7 @@ import logging
 
 app = FastAPI()
 
-logger = logging.getLogger("uvicorn")
+logger = logging.getLogger("uvicorn.error")
 
 @app.get("/")
 async def root():
