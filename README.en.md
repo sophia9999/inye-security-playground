@@ -39,8 +39,6 @@ my-fastapi-test/
 - Authentication is implemented using stateless JWT tokens.
 - External access is gated through Cloudflare Access to simulate a zero-trust perimeter.
 
----
-
 ## ⚠️ Disclaimer
 
 This project is intended for educational and security research purposes only.  
