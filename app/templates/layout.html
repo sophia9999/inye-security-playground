@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}인증 실험 프로젝트{% endblock %}</title>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="bg-gray-100 text-gray-800 flex flex-col min-h-screen">
+
+  {% include "header.html" %}
+
+  <main class="flex-grow">
+    <div class="max-w-4xl mx-auto px-6 py-10">
+      {% block content %}{% endblock %}
+    </div>
+  </main>
+
+  {% include "footer.html" %}
+
+</body>
+</html>

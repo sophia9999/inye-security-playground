@@ -1,12 +1,11 @@
 from fastapi import FastAPI
-import logging
+from fastapi.staticfiles import StaticFiles
+
+from app.routes import root  # 라우터 임포트
 
 app = FastAPI()
 
-logger = logging.getLogger("uvicorn.error")
+app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
-@app.get("/")
-async def root():
-    logger.debug("DEBUG 로그입니다.")
-    logger.info("INFO 로그입니다.")
-    return {"message": "Hello World"}
+# 라우터 등록
+app.include_router(root.router)

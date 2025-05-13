@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}홈 | 인증 실험{% endblock %}
+
+{% block content %}
+  <h2 class="text-2xl font-semibold mb-4">환영합니다!</h2>
+  {% if user %}
+    <p class="mb-6">로그인된 사용자: <strong>{{ user.email }}</strong></p>
+    <a href="/dashboard" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">대시보드로 이동</a>
+  {% else %}
+    <p class="mb-6">보안 실험을 시작하려면 먼저 로그인해주세요.</p>
+  {% endif %}
+{% endblock %}

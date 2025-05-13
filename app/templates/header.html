@@ -1,0 +1,17 @@
+<header class="bg-white shadow">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-blue-700">
+        <i class="fas fa-shield-alt mr-2"></i>인증 실험 프로젝트
+      </h1>
+      <nav>
+        <a href="/" class="text-blue-600 hover:underline mr-4">홈</a>
+        {% if user %}
+          <a href="/dashboard" class="text-blue-600 hover:underline mr-4">대시보드</a>
+          <a href="/logout" class="text-red-600 hover:underline">로그아웃</a>
+        {% else %}
+          <a href="/login" class="text-blue-600 hover:underline">로그인</a>
+        {% endif %}
+      </nav>
+    </div>
+  </header>
+  

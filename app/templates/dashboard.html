@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}대시보드{% endblock %}
+
+{% block content %}
+  <h2 class="text-2xl font-semibold mb-6">대시보드</h2>
+  <p class="mb-4">이 페이지는 인증된 사용자만 접근할 수 있습니다.</p>
+
+  <div class="bg-white p-6 rounded shadow">
+    <p class="mb-2"><strong>이메일:</strong> hih0919@gmail.com </p>
+    <p class="mb-2"><strong>로그인 방식:</strong> Google OAuth</p>
+    <p class="mb-2"><strong>토큰 만료:</strong> {{ datetime }}</p>
+  </div>
+
+  <div class="mt-6">
+    <a href="/" class="text-blue-600 hover:underline">홈으로</a>
+  </div>
+{% endblock %}
